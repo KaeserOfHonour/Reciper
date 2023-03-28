@@ -7,7 +7,7 @@ interface Props {
 }
 const Layout: React.FC<Props> = ({ className, title, children }) => {
     return (
-        <section className={LayoutStyles.layout}>
+        <section className={`${LayoutStyles.layout} ${className}`}>
             {title && <h2 className={LayoutStyles.title}>{title}</h2>}
             {children}
         </section>
