@@ -21,27 +21,31 @@ const Header: React.FC = () => {
             <nav className={`${HeaderStyles.navigation} ${expanded ? HeaderStyles.active : ""}`}>
                 <ul>
                     <li>
-                        <NavLink to="/" className={(navData) => (navData.isActive ? HeaderStyles.active : "")}>
+                        <NavLink to="/" className={(navData) => (navData.isActive ? HeaderStyles.active : "")} aria-label="Home">
                             {isPhone ? "Home" : <HiHome className={HeaderStyles.icon} />}
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/discover" className={(navData) => (navData.isActive ? HeaderStyles.active : "")}>
+                        <NavLink
+                            to="/discover"
+                            className={(navData) => (navData.isActive ? HeaderStyles.active : "")}
+                            aria-label="Discover"
+                        >
                             {isPhone ? "Discover" : <FaRegCompass className={HeaderStyles.icon} />}
                         </NavLink>
                     </li>
                     {/* <li>
-                        <NavLink to="/profile" className={(navData) => (navData.isActive ? HeaderStyles.active : "")}>
+                        <NavLink to="/profile" className={(navData) => (navData.isActive ? HeaderStyles.active : "")} aria-label="Notifications">
                             {isPhone ? "Notifications" : <FaBell className={HeaderStyles.icon} />}
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/profile" className={(navData) => (navData.isActive ? HeaderStyles.active : "")}>
+                        <NavLink to="/profile" className={(navData) => (navData.isActive ? HeaderStyles.active : "")} aria-label="Profile">
                             {isPhone ? "Profile" : <FaUserCircle className={HeaderStyles.icon} />}
                         </NavLink>
                     </li> */}
                     <li>
-                        <NavLink to="/signin" className={(navData) => (navData.isActive ? HeaderStyles.active : "")}>
+                        <NavLink to="/signin" className={(navData) => (navData.isActive ? HeaderStyles.active : "")} aria-label="Sign In">
                             {isPhone ? "Sign in" : <FaSignInAlt className={HeaderStyles.icon} />}
                         </NavLink>
                     </li>
