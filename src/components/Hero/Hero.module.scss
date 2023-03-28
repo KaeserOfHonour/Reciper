@@ -1,0 +1,33 @@
+@use "../../scss/abstract/mixins" as *;
+
+.hero {
+    @include flex($align: center, $gap: 2rem);
+
+    height: 100vh;
+    margin-top: -66px;
+    padding: 10rem 0;
+    text-align: center;
+}
+
+.heading {
+    display: inline;
+
+    font-size: 5rem;
+
+    background-image: linear-gradient(90deg, #efb293, #e08460);
+
+    /* stylelint-disable-next-line property-no-vendor-prefix */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.slogan {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.logo {
+    width: 5rem;
+}

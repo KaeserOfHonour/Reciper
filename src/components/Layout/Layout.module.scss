@@ -1,0 +1,10 @@
+.layout {
+    @include respond-tablet {
+        padding: 2rem 5rem;
+    }
+    @include respond-phone {
+        padding: 2rem;
+    }
+
+    padding: 2rem 10rem;
+}

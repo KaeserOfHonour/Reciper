@@ -1,14 +1,6 @@
 @use "../../scss/abstract/screen-queries" as *;
 
 .wrapper {
-    @include respond-tablet {
-        padding: 2rem 5rem;
-    }
-    @include respond-phone {
-        padding: 2rem;
-    }
-
     min-height: calc(100vh - 66px);
     margin-top: 66px;
-    padding: 2rem 10rem;
 }
