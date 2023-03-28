@@ -1,0 +1,92 @@
+@use "../../scss/abstract/mixins" as *;
+@use "../../scss/abstract/screen-queries" as *;
+
+.header {
+    @include flex($direction: row, $align: center, $justify: space-between);
+
+    @include respond-tablet {
+        padding: 0.5rem 5rem;
+    }
+    @include respond-phone {
+        padding: 0.5rem 2rem;
+    }
+
+    position: fixed;
+    z-index: 999;
+    top: 0;
+
+    width: 100%;
+    padding: 0.5rem 10rem;
+
+    background-color: var(--foreground);
+    box-shadow: var(--shadow);
+
+    .hamburger {
+        @include respond-phone {
+            display: flex;
+        }
+
+        display: none;
+    }
+}
+
+.logo {
+    height: 3.125rem;
+}
+
+.icon {
+    font-size: 1.5rem;
+}
+
+.navigation {
+    @include respond-phone {
+        position: absolute;
+        top: -1px;
+        right: 2rem;
+        left: 2rem;
+        transform: translateY(-100%);
+
+        padding: 2rem;
+
+        opacity: 0;
+        background-color: var(--foreground);
+        border-radius: 0.5em;
+        box-shadow: var(--shadow);
+
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+
+        &.active {
+            top: 5.5rem;
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    ul {
+        @include flex($direction: row, $gap: 5rem);
+        @include respond-phone {
+            @include flex($align: center, $gap: 2rem);
+        }
+
+        list-style: none;
+
+        a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--hover);
+        }
+
+        a:hover,
+        a:focus-visible {
+            color: var(--primary-hover);
+        }
+
+        a:active {
+            color: var(--primary-active);
+        }
+
+        a.active {
+            color: var(--primary);
+        }
+    }
+}

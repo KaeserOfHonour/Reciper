@@ -1,6 +1,10 @@
 :root {
     --background: #f7f7f7;
-    --foreground: #f9f9f9;
+    --foreground: #ffffff;
     --text: #292d36;
-    --shadow: rgba(149 157 165 / 5%);
+    --text-light: hsl(20deg 1% 57%);
+    --primary: hsl(22deg 71% 64%);
+    --primary-hover: hsl(22deg 71% 72%);
+    --primary-active: hsl(22deg 71% 60%);
+    --shadow: 0 0.7rem 2.9rem 0 rgba(149 157 165 / 5%);
 }
