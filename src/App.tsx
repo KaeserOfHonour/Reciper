@@ -1,23 +1,10 @@
-import { Suspense } from "react";
-import { createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProvider } from "react-router-dom";
-import Header from "./components/Header/Header";
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
+import Wrapper from "./pages/Wrapper/Wrapper";
 import "./scss/styles.scss";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
-        <Route
-            path="/"
-            element={
-                <>
-                    <Header />
-                    <main>
-                        <Suspense fallback={<h1>Loading...</h1>}>
-                            <Outlet />
-                        </Suspense>
-                    </main>
-                </>
-            }
-        >
+        <Route path="/" element={<Wrapper />}>
             <Route index element={<h1>Hello World!</h1>} />
         </Route>
     )
