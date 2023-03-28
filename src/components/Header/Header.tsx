@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
-import { FaBell, FaUserCircle, FaRegCompass, FaSignInAlt } from "react-icons/fa";
+import { FaRegCompass, FaSignInAlt } from "react-icons/fa";
 import { HiHome } from "react-icons/hi";
 import HeaderStyles from "./Header.module.scss";
 import logo from "../../images/logo.png";
