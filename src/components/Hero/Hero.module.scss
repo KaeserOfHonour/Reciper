@@ -1,11 +1,28 @@
 @use "../../scss/abstract/mixins" as *;
+@use "../../scss/abstract/screen-queries" as *;
 
 .hero {
-    @include flex($align: center, $gap: 2rem);
+    @include respond-tablet-landscape {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    @include respond-tablet {
+        padding: 10rem 5rem;
+    }
+    @include respond-phone {
+        padding: 10rem 2rem;
+    }
+
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 5rem;
+    align-items: center;
 
     height: 100vh;
     margin-top: -66px;
-    padding: 10rem 2rem;
+    padding: 10rem;
+
     text-align: center;
 }
 
@@ -28,6 +45,13 @@
     color: var(--primary-hover);
 }
 
-.logo {
-    width: 10rem;
+.info {
+    @include flex($align: center, $gap: 2rem);
+}
+
+.image {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 2rem;
 }

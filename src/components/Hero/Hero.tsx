@@ -1,12 +1,14 @@
 import HeroStyles from "./Hero.module.scss";
-import Logo from "../../images/logo.png";
+import HeroImg from "../../images/Hero.jpg";
 
 const Hero: React.FC = () => {
     return (
         <section className={HeroStyles.hero}>
-            <img src={Logo} alt="Logo" className={HeroStyles.logo} />
-            <h1 className={HeroStyles.heading}>Reciper</h1>
-            <p className={HeroStyles.slogan}>Discover, create, and share delicious recipes</p>
+            <section className={HeroStyles.info}>
+                <h1 className={HeroStyles.heading}>Reciper</h1>
+                <p className={HeroStyles.slogan}>Discover, create, and share delicious recipes</p>
+            </section>
+            <img src={HeroImg} alt="Hero" className={HeroStyles.image} />
         </section>
     );
 };
