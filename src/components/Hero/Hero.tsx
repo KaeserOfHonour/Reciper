@@ -1,5 +1,5 @@
 import HeroStyles from "./Hero.module.scss";
-import HeroImg from "../../images/Hero.jpg";
+import HeroImg from "../../images/hero.webp";
 
 const Hero: React.FC = () => {
     return (
